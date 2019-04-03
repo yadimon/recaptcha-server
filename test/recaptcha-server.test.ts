@@ -1,14 +1,16 @@
-import DummyClass from "../src/recaptcha-server"
+import Recaptcha from '../src/recaptcha-server'
 
 /**
  * Dummy test
  */
-describe("Dummy test", () => {
-  it("works if true is truthy", () => {
-    expect(true).toBeTruthy()
+describe('Recaptcha', () => {
+  const recInstance = new Recaptcha('testSercet')
+  it('should can init instance with secret', () => {
+    expect(recInstance).toBeInstanceOf(Recaptcha)
   })
 
-  it("DummyClass is instantiable", () => {
-    expect(new DummyClass()).toBeInstanceOf(DummyClass)
+  it('should can not verify v3 token with incorrect data', async () => {
+    const isVerified = await recInstance.verifyV3Async('testToken')
+    expect(isVerified).toBeFalsy()
   })
 })
