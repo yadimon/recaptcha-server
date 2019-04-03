@@ -7,21 +7,23 @@
 
 The server side recaptcha module to do verification. Use with [Google reCaptcha](https://www.google.com/recaptcha)
 
-### Usage
+## Usage
 
 This verification used the v3 method, which returns a score (1.0 is very likely a good interaction, 0.0 is very likely a bot).
 
 The lib by default use the `0.6` as the default passed minScore(not included)
 
 ```js
-import Recaptcha from '@pardjs/recaptcha-server'
+import Recaptcha from '@pardjs/recaptcha-server';
 
-const recInstance = new Recaptcha('The reCaptcha Secret that get from Google reCapatcha')
+// #RECAPTCHA_SECRET get from the google recaptcha site.
+const recInstance = new Recaptcha('#RECAPTCHA_SECRET#');
 
 // Verifiy the token directly
-const v3Result = await recInstance.verifyV3Async('testToken1')
+// #RECAPTCHA_TOKEN get from the client
+const v3Result = await recInstance.verifyV3Async('#RECAPTCHA_TOKEN#'); request.
 // Verifiy the token with custom min passed score
-const v3Result = await recInstance.verifyV3Async('testToken1', 0.8)
+const v3Result = await recInstance.verifyV3Async('#RECAPTCHA_TOKEN#', 0.8);
 
 // The v3Result example
 // {
