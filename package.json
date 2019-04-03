@@ -62,10 +62,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 90,
-        "functions": 95,
-        "lines": 95,
-        "statements": 95
+        "branches": 70,
+        "functions": 85,
+        "lines": 85,
+        "statements": 85
       }
     },
     "collectCoverageFrom": [
@@ -73,7 +73,6 @@
     ]
   },
   "prettier": {
-    "semi": false,
     "singleQuote": true
   },
   "commitlint": {
