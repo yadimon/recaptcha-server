@@ -1,6 +1,6 @@
 {
   "name": "@pardjs/recaptcha-server",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "🔍The server side reCaptcha module to do verification.",
   "keywords": [],
   "main": "dist/recaptcha-server.js",
