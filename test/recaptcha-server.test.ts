@@ -1,7 +1,7 @@
 'use strict';
 
 import Recaptcha from '../src/recaptcha-server';
-import * as nock from 'nock';
+import nock from 'nock';
 
 describe('Recaptcha', () => {
   const recInstance = new Recaptcha('testSecret');
