@@ -67,7 +67,7 @@ export default class Recaptcha {
         action,
         checkedAt: new Date()
       };
-    } catch (error) {
+    } catch (error: any) {
       error.type = error.type || 'RECAPTCHA_UNEXPECTED_ERROR';
       throw error;
     }
