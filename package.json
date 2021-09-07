@@ -1,16 +1,19 @@
 {
-  "name": "@pardjs/recaptcha-server",
-  "version": "0.2.0",
-  "description": "🔍The server side reCaptcha module to do verification.",
+  "name": "pardjs-recaptcha-server-updated",
+  "version": "0.0.1",
+  "description": "🔍The server side reCaptcha module to do verification. (updated)",
   "keywords": [],
   "main": "dist/recaptcha-server.js",
   "files": [
     "dist"
   ],
   "author": "Oliver.W <ole3021@gmail.com>",
+  "contributors": [
+    "Dmitry Gorelenkov <dmitry.gorelenkov@gmx.net>"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/pardjs/recaptcha-server.git"
+    "url": "https://github.com/yadimon/recaptcha-server"
   },
   "license": "MIT",
   "engines": {
@@ -19,7 +22,7 @@
   "scripts": {
     "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
-    "build": "tsc && typedoc --out docs --target es6 --theme minimal --mode file src",
+    "build": "tsc && typedoc --out docs --theme minimal src",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",
     "test:prod": "npm run lint && npm run test -- --no-cache",
